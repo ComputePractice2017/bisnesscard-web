@@ -1,95 +1,83 @@
-<<template>
+<template>
     <div class="cards">
         <div class="container">
-            <p class="title">Создать Страницу</p>
-            <form class="form-signin">
+            <form class="addcardform align-self-center col-8 alert alert-error">
+                    <div class="titleform form-group col-9">
+                        <h1>Создать визитку</h1>
+                    </div>                    
                     <div class="form-group row">
-                    <label for="id-input" class="col-2 col-form-label">ID визитки</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" v-model="newcard.id" placeholder="ID" required id="id-input">
+                        <label for="id-input" class="col-3 col-form-label col-form-label-sm">ID визитки</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm col-form-label-sm" type="text" v-model="newcard.id" placeholder="Введите ID" required id="id-input">
+                        </div>
                     </div>
-                    </div>
-
                     <div class="form-group row">
-                    <label for="name-input" class="col-2 col-form-label">Имя</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" v-model="newcard.name" placeholder="Name" required id="name-input">
+                        <label for="name-input" class="col-3 col-form-label col-form-label-sm">Имя</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm" type="text" v-model="newcard.name" placeholder="Введите имя" required id="name-input">
+                        </div>
                     </div>
-                    </div>
-
                     <div class="form-group row">
-                    <label for="email-input" class="col-2 col-form-label">Email</label>
-                    <div class="col-4">
-                        <input class="form-control" type="email" v-model="newcard.email" placeholder="Email" required id="email-input">
+                        <label for="email-input" class="col-3 col-form-label col-form-label-sm">Email</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm" type="email" v-model="newcard.email" placeholder="Введите Email" required id="email-input">
+                        </div>
                     </div>
-                    </div>
-
                     <div class="form-group row">
-                    <label for="password-input" class="col-2 col-form-label">Пароль</label>
-                    <div class="col-4">
-                        <input class="form-control" type="password"  v-model="newcard.password" required id="password-input">
+                        <label for="password-input" class="col-3 col-form-label col-form-label-sm">Пароль</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm" type="password"  v-model="newcard.password" placeholder="Введите пароль" required id="password-input">
+                        </div>
                     </div>
-                    </div>
-
                     <div class="form-group row">
-                    <label for="description-input" class="col-2 col-form-label">Подпись</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" v-model="newcard.description" placeholder="Description" id="description-input">
+                        <label for="description-input" class="col-3 col-form-label col-form-label-sm">Подпись</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm" type="text" v-model="newcard.description" placeholder="Введите подпись" id="description-input">
+                        </div>
                     </div>
-                    </div>
-
                     <div class="form-group row">
-                    <label for="sitebutton-input" class="col-2 col-form-label">Кнопка сайта</label>
-                    <div class="col-4">
-                        <input class="form-control" type="url" v-model="newcard.sitebutton" placeholder="Site URL" id="sitebutton-input">
+                        <label for="sitebutton-input" class="col-3 col-form-label col-form-label-sm">Кнопка сайта</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm" type="text" v-model="newcard.sitebutton" placeholder="http://???" id="sitebutton-input">
+                        </div>
                     </div>
-                    </div>
-
                     <div class="form-group row">
-                    <label for="messenger-input" class="col-2 col-form-label">Messenger</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" v-model="newcard.messenger" placeholder="Messenger" id="messenger-input">
+                        <label for="messenger-input" class="col-3 col-form-label col-form-label-sm">Messenger</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm" type="text" v-model="newcard.messenger" placeholder="ms.me/???" id="messenger-input">
+                        </div>
                     </div>
-                    </div>
-
                     <div class="form-group row">
-                    <label for="telegram-input" class="col-2 col-form-label">Telegram https://telegram.org/</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" v-model="newcard.telegram" placeholder="telegram" id="telegram-input">
+                        <label for="telegram-input" class="col-3 col-form-label col-form-label-sm">Telegram</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm" type="text" v-model="newcard.telegram" placeholder="t.me\???" id="telegram-input">
+                        </div>
                     </div>
-                    </div>
-
                     <div class="form-group row">
-                    <label for="vk-input" class="col-2 col-form-label">VK https://vk.com/</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" v-model="newcard.vk" placeholder="vk" id="vk-input">
+                        <label for="vk-input" class="col-3 col-form-label col-form-label-sm">VK</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm" type="text" v-model="newcard.vk" placeholder="vk.me\???" id="vk-input">
+                        </div>
                     </div>
-                    </div>
-
                     <div class="form-group row">
-                    <label for="whatsapp-input" class="col-2 col-form-label">WhatsApp</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" v-model="newcard.whatsapp" placeholder="WhatsApp" id="whatsapp-input">
+                        <label for="whatsapp-input" class="col-3 col-form-label col-form-label-sm">WhatsApp</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm" type="text" v-model="newcard.whatsapp" placeholder="+???" id="whatsapp-input">
+                        </div>
                     </div>
-                    </div>
-
                     <div class="form-group row">
-                    <label for="viber-input" class="col-2 col-form-label">Viber</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" v-model="newcard.viber" placeholder="Viber" id="viber-input">
+                        <label for="viber-input" class="col-3 col-form-label col-form-label-sm">Viber</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm" type="text" v-model="newcard.viber" placeholder="+???" id="viber-input">
+                        </div>
                     </div>
-                    </div>
-
                     <div class="form-group row">
-                    <label for="skype" class="col-2 col-form-label">Skype</label>
-                    <div class="col-4">
-                        <input class="form-control" type="text" v-model="newcard.skype" placeholder="Skype" id="skype-input">
+                        <label for="skype" class="col-3 col-form-label col-form-label-sm">Skype</label>
+                        <div class="col-5">
+                            <input class="form-control form-control-sm" type="text" v-model="newcard.skype" placeholder="???" id="skype-input">
+                        </div>
                     </div>
-                </div>
-
-                    <div class="btn btn-lg btn-primary btn-block">
-                        <button type="submit" v-on:click="addnewcard(newcard)" class="btn btn-primary">Добавить</button>
-                    </div>
+                    <button type="submit" v-on:click="addnewcard(newcard)" class="btn btn-primary col-8 btn-block" >Добавить</button>                   
             </form>
 
             <table class="table">
@@ -109,20 +97,20 @@
                         <th>Skype</th>
                     </tr>
                 </thead>
-                <tbody>
+                 <tbody>
                     <tr v-for="card in cards">
                         <td>{{card.id}}</td>
                         <td>{{card.name}}</td>
                         <td>{{card.email}}</td>
                         <td>{{card.password}}</td>
                         <td>{{card.description}}</td>
-                        <td>{{card.sitebutton}}</td>
-                        <td>{{card.messenger}}</td>
-                        <td>{{card.telegram}}</td>
-                        <td>{{card.vk}}</td>
-                        <td>{{card.whatsapp}}</td>
-                        <td>{{card.viber}}</td>
-                        <td>{{card.skype}}</td>
+                        <td><a :href="'http://' + card.sitebutton">{{card.sitebutton}}</a></td>
+                        <td><a :href="'http://m.me/' + card.messenger">{{card.messenger}}</a></td>
+                        <td><a :href="'https://t.me/' + card.telegram">{{card.telegram}}</a></td>
+                        <td><a :href="'https://vk.me/' + card.vk">{{card.vk}}</a></td>
+                        <td><a :href="'whatsapp://send?text=hey&amp;phone=' + card.whatsapp">{{card.whatsapp}}</a></td>
+                        <td><a :href="'viber://add?number=' + card.viber">{{card.viber}}</a></td>
+                        <td><a :href="'skype:' + card.skype + '?chat'">{{card.skype}}</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -145,7 +133,7 @@
               'sitebutton': 'xxxx',
               'messenger': 'ilo',
               'telegram': 'ilo',
-              'vk': 'vk.com//dos',
+              'vk': 'dos',
               'whatsapp': 'eee',
               'viber': 'ee',
               'skype': 'des'
@@ -159,7 +147,7 @@
               'sitebutton': 'xxxx',
               'messenger': 'ilo',
               'telegram': 'ilo',
-              'vk': 'vk.com//dos',
+              'vk': 'dos',
               'whatsapp': 'eee',
               'viber': 'ee',
               'skype': 'des'
@@ -198,9 +186,12 @@
             'viber': '',
             'skype': ''
           }
+          var emvarif = /^\w+@\w+\.\w{2,4}$/i
           obj.id = this.newcard.id
           obj.name = this.newcard.name
-          obj.email = this.newcard.email
+          if (emvarif.test(this.newcard.email)) {
+            obj.email = this.newcard.email
+          }
           obj.password = this.newcard.password
           obj.description = this.newcard.description
           obj.sitebutton = this.newcard.sitebutton
@@ -218,11 +209,14 @@
 }
 </script>
 
-<style>
-.formadd {
+<style scoped>
+.titleform{
+    text-align: center;
+}
+.addcardform{
     margin-top: 20px;
     margin-bottom: 20px;
-
+    margin-left: auto;
 }
 </style>
 
