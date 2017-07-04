@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import showcard from '@/components/Showcard'
 import addcard from '@/components/Cards'
+import showcard from '@/components/Showcard'
 import editcard from '@/components/Editcard'
 
 Vue.use(Router)
