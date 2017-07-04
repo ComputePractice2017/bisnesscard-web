@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import showcard from '@/components/Showcard'
+import addcard from '@/components/Cards'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Hello',
-      component: Hello
+      path: '/addcard',
+      name: 'addcard',
+      component: addcard
+    },
+    {
+      path: '/showcard',
+      name: 'showcard',
+      component: showcard
     }
   ]
 })
