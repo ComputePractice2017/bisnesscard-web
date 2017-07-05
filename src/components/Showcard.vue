@@ -2,12 +2,12 @@
     <div class="userpage">
         <div class="header d-flex justify-content-between">
             <a href='/' class="logo">visitcard.me</a>
-            <a class="settings btn btn-primary" :href="'/editcard/' + cards[0].id">Настройки</a>
+            <a class="settings btn btn-primary" :href="'/update/' + cards[0].id">Настройки</a>
         </div>
         <div class="cardcontainer container d-flex justify-content-center">
             <div class="layer col-6 col-xs-4 col-md-4 rounded card">
                 <div class="cardheader card-block">
-                    <span v-if="cards[0].photo" class="photo"><img src="../assets/user.png" class="img-thumbnail rounded-circle" data-html2canvas-ignore="true"></span>
+                    <span v-if="cards[0].photo" class="photo"><img src="../assets/user.png" class="img-thumbnail rounded-circle"></span>
                     <p v-if="cards[0].name" class="name">{{cards[0].name}}</p>
                     <p v-if="cards[0].desc" class="description">{{cards[0].desc}}</p>
                 </div>

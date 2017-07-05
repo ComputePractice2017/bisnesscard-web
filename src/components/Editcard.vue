@@ -65,8 +65,8 @@
                             <input class="form-control form-control-sm" type="text" v-model="cards[0].skype" placeholder="???" id="skype-input">
                         </div>
                     </div>
-                    <button v-on:click="endEdit"  v-if="cards[0].name  && varifem(cards[0].mail)" class="btn btn-primary col-8 btn-block" >Сохранить</button>
-                    <a class="btn btn-primary col-8 btn-block" :href="'/showcard/' + cards[0].id">Отмена</a>
+                    <button v-on:click="endEdit" type="button" v-if="cards[0].name  && varifem(cards[0].mail)" class="btn btn-primary col-8 btn-block" >Сохранить</button>
+                    <a class="btn btn-primary col-8 btn-block" :href="'/getInfo/' + cards[0].id">Отмена</a>
                     <button v-on:click="deletecard" type="button" class="btn btn-danger col-8 btn-block">Удалить</button>  
             </form>
 

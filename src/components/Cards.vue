@@ -65,7 +65,7 @@
                             <input class="form-control form-control-sm" type="text" v-model="newcard.skype" placeholder="???" id="skype-input">
                         </div>
                     </div>
-                    <button v-on:click="addnewcard(newcard)" class="btn btn-primary col-8 btn-block" >Добавить</button>                   
+                    <button v-on:click="addnewcard(newcard)" type="button" class="btn btn-primary col-8 btn-block" >Добавить</button>                   
             </form>
 
             <table class="table">
@@ -123,14 +123,6 @@
             'skype': ''
           }
         }
-      },
-      mounted: function () {
-        this.$http.get('/getInfo').then(response => {
-          this.cards = response.body
-          console.log(this.cards)
-        }, response => {
-          console.log(response)
-        })
       },
       methods: {
         addnewcard: function () {
