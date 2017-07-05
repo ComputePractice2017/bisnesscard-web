@@ -14,13 +14,11 @@ export default new Router({
       component: addcard
     },
     {
-      path: '/showcard',
-      name: 'showcard',
+      path: '/showcard/:id',
       component: showcard
     },
     {
-      path: '/editcard',
-      name: 'editcard',
+      path: '/editcard/:id',
       component: editcard
     }
   ]
