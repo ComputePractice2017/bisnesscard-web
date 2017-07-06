@@ -1,27 +1,25 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import addcard from '@/components/Cards'
-import showcard from '@/components/Showcard'
-import editcard from '@/components/Editcard'
+import createCard from '@/components/Cards'
+import getInfo from '@/components/Showcard'
+import update from '@/components/Editcard'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/addcard',
+      path: '/create',
       name: 'addcard',
-      component: addcard
+      component: createCard
     },
     {
-      path: '/showcard',
-      name: 'showcard',
-      component: showcard
+      path: '/getInfo/:id',
+      component: getInfo
     },
     {
-      path: '/editcard',
-      name: 'editcard',
-      component: editcard
+      path: '/update/:id',
+      component: update
     }
   ]
 })
